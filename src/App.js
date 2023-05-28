@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css';
 import Resources from './components/Resources';
+import Resource from './components/Resource';
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Resources />}/>
-          {/* <Route path='/:id' element={<Resource />}/>
-          <Route path='/:id/edit' element={<EditResource />}/> */}
+          <Route path='/:id' element={<Resource />}/>
+          {/* <Route path='/:id/edit' element={<EditResource />}/> */}
         </Routes>
       </Router>
     </div>

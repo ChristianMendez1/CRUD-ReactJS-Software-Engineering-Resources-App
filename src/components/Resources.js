@@ -16,7 +16,7 @@ export default function Resources() {
             {resources.map((resource) =>{
                 return (
                     <div>
-                    <Link to={`/${resource._id}`}>{resource.tutorials}</Link>
+                        <Link to={`/${resource._id}`}>{resource.tutorials}</Link>
                     </div>
                 )
             })}

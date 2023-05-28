@@ -5,16 +5,15 @@ function Create() {
     const nav = useNavigate()
 
     const createTheResource = (e) => {
-        const resource = {description: e.target.description.value, complete: false}
+        const resource = {tutorials: e.target.tutorials.value}
         createResource(resource).then(() => nav('/'))
-        
     }
 
 return(
     <div>
         <h4>Create a Resource</h4>
         <form onSubmit={createTheResource}>
-            <input type='text' name='description' id='dsc'/>
+            <input type='text' name='tutorials' id='rsc'/>
             <input type='submit'/>
         </form>
     </div>
