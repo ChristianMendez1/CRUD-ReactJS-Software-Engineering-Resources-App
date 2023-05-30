@@ -14,14 +14,18 @@ export default function EditResource(){
 
     const editTheResource = e => {
         e.preventDefault()
-        const updatedResource = {tutorials: e.target.tutorials.value}
+        const updatedResource = {
+            tutorials: e.target.tutorials.value,
+            jobboards: e.target.jobboards.value
+        }
         editResource(id, updatedResource)
         nav(`/${id}`)
     }
   return (
     <div>
         <form onSubmit={editTheResource}>
-            Tutorials:<input type='text' name='tutorials' defaultValue={data.tutorials}/>
+            Tutorials:<input type='text' name='tutorials' defaultValue={data.tutorials}/><br></br>
+            Job Boards:<input type='text' name='jobboards' defaultValue={data.jobboards}/><br></br>
             <input type='submit' />
         </form>
     </div>
