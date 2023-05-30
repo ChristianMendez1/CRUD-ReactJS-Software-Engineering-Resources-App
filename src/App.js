@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
 import Resources from './components/Resources';
 import Resource from './components/Resource';
+import EditResource from './components/EditResource';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Resources />}/>
           <Route path='/:id' element={<Resource />}/>
-          {/* <Route path='/:id/edit' element={<EditResource />}/> */}
+          <Route path='/:id/edit' element={<EditResource />}/>
         </Routes>
       </Router>
     </div>
