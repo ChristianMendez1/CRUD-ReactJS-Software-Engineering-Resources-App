@@ -6,12 +6,17 @@ export default function Resource() {
     const nav = useNavigate() 
     const {id} = useParams() 
     const [resource, setResource] = useState({}) 
-    
+    const [requestData, setRequestData] = useState(new Date());
+
     useEffect(() => {
         console.log('useeffect')
         getResource(id)
-        .then(res => setResource(res.data))}, [useParams() ])
+        .then(res => setResource(res.data))
+    }, [requestData])
 
+    useEffect(() => {
+        setRequestData(new Date())
+    }, [])
 
     const deleteTheResource = () => {
        deleteResource(id) 
@@ -21,7 +26,7 @@ export default function Resource() {
     return(
         <div>
             <h1>Resource:</h1>
-            <h3>{resource.tutorials}{resource.jobboards}</h3>
+            <h3>{resource.tutorialtitles}{resource.tutorialurls}{resource.jobboards}{resource.definitiontitles}{resource.definitions}</h3>
             <button onClick={() => {nav(`/${id}/edit`)}}>Edit</button>
             <button onClick={deleteTheResource}>Delete</button> 
             <button onClick={() => {nav('/')}}>Main</button> 

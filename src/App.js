@@ -7,7 +7,7 @@ import EditResource from './components/EditResource';
 function App() {
   return (
     <div className="App">
-      Software Engineering Resources
+      <h1>Software Engineering Resources</h1>
       <Router>
         <Routes>
           <Route path='/' element={<Resources />}/>

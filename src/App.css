@@ -1,0 +1,9 @@
+.resourcediv {
+    display: flex;
+}
+
+.button {
+    height:max-content;
+    display: flex;
+
+}
