@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# CRUD-REACT-SEResourcesApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MERN Stack App that allows you to create, read, update, and delete data pertaining to software engineering. Great for taking notes and applying for jobs.
 
-## Available Scripts
+# Motivation
 
-In the project directory, you can run:
+As a software engineering bootcamp graduate it can be tedious to visit my bookmarks to click all of the links I need and then look through different documents and google to find notes or information that I need. This app makes all of that streamline. In one page you have everything you need.
 
-### `npm start`
+# Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![readmescreenshot](https://i.imgur.com/frjYTMn.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Built with
 
-### `npm test`
+MERN Stack, Mongoose, MongoDB, Express, React, Node, Javascript, CSS, and HTML.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Features
 
-### `npm run build`
+Features a Front-end that uses React and Back-end that uses Express. The Back-end creates an API and stores it using MongoDB. The Front-end Fetches the API and allows you to create new data, edit data, display data, and delete data. The data is designed to help you keep your notes on Software Engineering in one place. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# How to use
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Deployed through https://crud-reactjs-seresourcesapp.onrender.com/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Approach taken
 
-### `npm run eject`
+Express uses Mongodb to create a schema and store data. Routes are used to do CRUD functions. A seed route is used to test data. React then maps the data from the MongoDb database and display them. Buttons and input tags are used to allow user to create, edit, and delete data. The data is fetched using my Back-end app as the baseURL.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Code Example
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+import axios from 'axios'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+const baseURL = 'https://crud-expressjs-seresourcesapp.onrender.com/resources'
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+export const getResources = () => {
+    const URL = baseURL
+    const response = axios.get(URL) 
+    return response
+}
 
-## Learn More
+export const getResource = (id) => {
+    const URL = `${baseURL}/${id}`
+    const response = axios.get(URL)
+    return response
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+export const editResource = (id, updatedResource) => {
+    const URL = `${baseURL}/${id}`
+    const response = axios.put(URL, updatedResource)
+    return response
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+export const createResource = (resource) => {
+    const URL = baseURL
+    const response = axios.post(URL, resource)
+    return response
+}
 
-### Code Splitting
+export const deleteResource = (id) => {
+    const URL = `${baseURL}/${id}`
+    const response = axios.delete(URL)
+    return response
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Installation
+```
+Clone through https://github.com/ChristianMendez1/CRUD-ReactJS-Software-Engineering-Resources-App
+Tested through Visual Stuidio Code's live server. 
+Run npm install then npm start.
+```
 
-### Analyzing the Bundle Size
+# Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+My instructor Tishana's todo list app
+https://cheatography.com/programming/ for css ideas
+```
