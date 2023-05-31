@@ -16,6 +16,7 @@ export default function Resources() {
     useEffect(() => {
         console.log('useEffect2')
         getResources() 
+        getResources() 
         .then(res => setResources(res.data)) 
     }, [requestData])
 
@@ -30,8 +31,8 @@ export default function Resources() {
             <h1 class='title'>Tutorials</h1>
             {resources.map((resource) =>{
                 const deleteTheResource = () => {
-                    deleteResource(resource._id); 
                     setRequestData(new Date());
+                    deleteResource(resource._id); 
                     }
                 let links={
                     link: `${resource.tutorialurls}`,
