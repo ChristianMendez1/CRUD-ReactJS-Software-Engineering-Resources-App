@@ -25,35 +25,22 @@ export default function Resources() {
 
     console.log(resources)
     return(
-        <div>
+        <div id='alldivs'>
             <div>
-            <h1><u>Tutorials</u></h1>
+            <h1 class='title'>Tutorials</h1>
             {resources.map((resource) =>{
                 const deleteTheResource = () => {
                     deleteResource(resource._id); 
                     setRequestData(new Date());
                     }
-                if(resource.tutorialtitles){
+                let links={
+                    link: `${resource.tutorialurls}`,
+                }
+                if(resource.tutorialtitles || resource.tutorialurls){
                     return (
-                        <div class='resourcediv'>
-                            <h3 class='resourcediv'>{resource.tutorialtitles}
-                            <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
-                            <button class='button' onClick={deleteTheResource}>Delete</button></h3>
-                        </div>
-                    )}
-            })}
-            {resources.map((resource) =>{
-                    const deleteTheResource = () => {
-                        deleteResource(resource._id); 
-                        setRequestData(new Date());
-                        }
-                    let links={
-                        link: `${resource.tutorialurls}`,
-                    }
-                if(resource.tutorialurls){
-                    return (
-                        <div class='resourcediv'>
-                            <a href={links.link}>{resource.tutorialurls}</a>
+                        <div class='content'>
+                            <div><h3>{resource.tutorialtitles}</h3></div>
+                            <div><em><a href={links.link} target="_blank" >{resource.tutorialurls}</a></em></div>
                             <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
                             <button class='button' onClick={deleteTheResource}>Delete</button> 
                         </div>
@@ -61,7 +48,7 @@ export default function Resources() {
             })}
             </div>
             <div>
-                <h1><u>JobBoards</u></h1>
+                <h1 class='title'>JobBoards</h1>
                 {resources.map((resource) =>{
                     const deleteTheResource = () => {
                         deleteResource(resource._id); 
@@ -74,8 +61,8 @@ export default function Resources() {
 
                     if(resource.jobboards){
                         return (
-                            <div class='resourcediv'>
-                                <a href={links.link}>{resource.jobboards}</a>
+                            <div class='content'>
+                                <em><a href={links.link}>{resource.jobboards}</a></em>
                                 <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
                                 <button class='button' onClick={deleteTheResource}>Delete</button> 
                             </div>
@@ -83,7 +70,7 @@ export default function Resources() {
                 })}
             </div>
             <div>
-                <h1><u>Definitions</u></h1>
+                <h1 class='title'>Definitions</h1>
                 {resources.map((resource) =>{
                         const deleteTheResource = () => {
                             deleteResource(resource._id); 
@@ -93,29 +80,13 @@ export default function Resources() {
                             link: `${resource.jobboards}`,
                         }
 
-                    if(resource.definitiontitles){
+                    if(resource.definitiontitles || resource.definitions){
                         return (
-                            <div class='resourcediv'>
-                                <h3 class='resourcediv'>{resource.definitiontitles}                                
+                            <div class='content'>
+                                <h3>{resource.definitiontitles}</h3>
+                                <em>{resource.definitions}</em>                             
                                 <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
-                                <button class='button' onClick={deleteTheResource}>Delete</button> </h3>
-                            </div>
-                        )}
-                })}
-                {resources.map((resource) =>{
-                        const deleteTheResource = () => {
-                            deleteResource(resource._id); 
-                            setRequestData(new Date());
-                            }
-                        let links={
-                            link: `${resource.jobboards}`,
-                        }
-                    if(resource.definitions){
-                        return (
-                            <div class='resourcediv'>
-                                {resource.definitions}
-                                <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
-                                <button class='button' onClick={deleteTheResource}>Delete</button> 
+                                <button class='button' onClick={deleteTheResource}>Delete</button>
                             </div>
                         )}
                 })}
