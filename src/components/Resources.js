@@ -38,6 +38,7 @@ export default function Resources() {
                         <div class='content'>
                             <div><h3>{resource.tutorialtitles}</h3></div>
                             <div><em><a href={links.link} target="_blank" >{resource.tutorialurls}</a></em></div>
+                            <button class='button' onClick={() => {nav(`/${resource._id}`)}}>Read</button>
                             <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
                             <button class='button' onClick={deleteTheResource}>Delete</button> 
                         </div>
@@ -60,6 +61,7 @@ export default function Resources() {
                         return (
                             <div class='content'>
                                 <em><a href={links.link}>{resource.jobboards}</a></em>
+                                <button class='button' onClick={() => {nav(`/${resource._id}`)}}>Read</button>
                                 <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
                                 <button class='button' onClick={deleteTheResource}>Delete</button> 
                             </div>
@@ -81,7 +83,8 @@ export default function Resources() {
                         return (
                             <div class='content'>
                                 <h3>{resource.definitiontitles}</h3>
-                                <em>{resource.definitions}</em>                             
+                                <em>{resource.definitions}</em>
+                                <button class='button' onClick={() => {nav(`/${resource._id}`)}}>Read</button>                             
                                 <button class='button' onClick={() => {nav(`/${resource._id}/edit`)}}>Edit</button>
                                 <button class='button' onClick={deleteTheResource}>Delete</button>
                             </div>
