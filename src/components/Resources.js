@@ -2,7 +2,6 @@ import { getResources } from "../services/resources-api"
 import{useState, useEffect} from 'react'
 import Create from "./CreateResource"
 import { useNavigate} from 'react-router-dom'
-
 import {deleteResource } from "../services/resources-api"
 
 export default function Resources() {

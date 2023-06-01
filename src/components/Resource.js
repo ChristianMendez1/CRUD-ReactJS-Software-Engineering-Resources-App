@@ -17,7 +17,7 @@ export default function Resource() {
     useEffect(() => {
         console.log('useeffect3')
         setRequestData(new Date())
-    }, [id])
+    }, [])
 
     const deleteTheResource = () => {
        deleteResource(id) 
