@@ -1,16 +1,13 @@
 import { getResources } from "../services/resources-api"
 import{useState, useEffect} from 'react'
 import Create from "./CreateResource"
-import { Link } from "react-router-dom"
-import {useParams, useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import { useNavigate} from 'react-router-dom'
 
-import { getResource, deleteResource } from "../services/resources-api"
+import {deleteResource } from "../services/resources-api"
 
 export default function Resources() {
     const [resources, setResources] = useState([])
     const [requestData, setRequestData] = useState(new Date());
-    const params = useParams()
     const nav = useNavigate() 
 
     useEffect(() => {

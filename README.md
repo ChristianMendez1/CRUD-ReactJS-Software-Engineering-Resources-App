@@ -8,7 +8,7 @@ As a software engineering bootcamp graduate it can be tedious to visit my bookma
 
 # Screenshots
 
-![readmescreenshot](https://i.imgur.com/frjYTMn.png)
+![readmescreenshot](https://i.imgur.com/5OFUF6y.png)
 
 # Built with
 
