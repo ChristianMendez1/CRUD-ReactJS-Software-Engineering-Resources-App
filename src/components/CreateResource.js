@@ -41,25 +41,25 @@ function Create() {
 
 return(
     <div>
-        <h4>Create a Resource</h4>
-        <form onSubmit={createTutorialTitles}>
-            Tutorial title: <input type='text' name='tutorialtitles' id='rsc'/><br></br>
+        <h1 class='title'>Create a Resource</h1>
+        <form class='content' onSubmit={createTutorialTitles}>
+            Tutorial title:&nbsp; <input type='text' name='tutorialtitles' id='rsc'/><br></br>
             <input type='submit'/>
-        </form><br></br>
-        <form onSubmit={createTutorialUrls}>
-            Tutorial url: <input type='url' name='tutorialurls' id='rsc'/><br></br>
+        </form>
+        <form class='content' onSubmit={createTutorialUrls}>
+            Tutorial url:&nbsp; <input type='url' name='tutorialurls' id='rsc'/><br></br>
             <input type='submit'/>
-        </form><br></br>
-        <form onSubmit={createJobBoards}>
-            Job Board: <input type='url' name='jobboards' id='rsc'/><br></br>
+        </form>
+        <form class='content' onSubmit={createJobBoards}>
+            Job Board:&nbsp; <input type='url' name='jobboards' id='rsc'/><br></br>
             <input type='submit'/>
-        </form><br></br>
-        <form onSubmit={createDefinitionTitles}>
-            Definition title: <input type='text' name='definitiontitles' id='rsc'/><br></br>
+        </form>
+        <form class='content' onSubmit={createDefinitionTitles}>
+            Definition title:&nbsp; <input type='text' name='definitiontitles' id='rsc'/><br></br>
             <input type='submit'/>
-        </form><br></br>
-        <form onSubmit={createDefinitions}>
-            Definition description: <input type='text' name='definitions' id='rsc'/><br></br>
+        </form>
+        <form class='content' onSubmit={createDefinitions}>
+            Definition description:&nbsp; <input type='text' name='definitions' id='rsc'/><br></br>
             <input type='submit'/>
         </form>
     </div>

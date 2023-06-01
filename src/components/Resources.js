@@ -26,7 +26,7 @@ export default function Resources() {
 
     console.log(resources)
     return(
-        <div id='alldivs'>
+        <div>
             <div>
             <h1 class='title'>Tutorials</h1>
             {resources.map((resource) =>{
