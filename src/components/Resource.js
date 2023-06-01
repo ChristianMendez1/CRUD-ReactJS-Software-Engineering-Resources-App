@@ -25,12 +25,13 @@ export default function Resource() {
     }
 
     return(
-        <div>
-            <h1>Resource:</h1>
-            <h3>{resource.tutorialtitles}{resource.tutorialurls}{resource.jobboards}{resource.definitiontitles}{resource.definitions}</h3>
+        <div >
+            <div class='content'>
+            <h3>Resource: {resource.tutorialtitles}{resource.tutorialurls}{resource.jobboards}{resource.definitiontitles}{resource.definitions}</h3>
             <button onClick={() => {nav(`/${id}/edit`)}}>Edit</button>
             <button onClick={deleteTheResource}>Delete</button> 
             <button onClick={() => {nav('/')}}>Main</button> 
+            </div>
         </div>
     )
 }

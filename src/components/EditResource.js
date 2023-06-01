@@ -61,7 +61,7 @@ export default function EditResource(){
     return (
         <div>
             <form class='content' onSubmit={editTheTutorialtitles}>
-                Tutorials:<input type='text' name='tutorialtitles' defaultValue={data.tutorialtitles}/><br></br>
+                Tutorial Title:&nbsp;<input type='text' name='tutorialtitles' defaultValue={data.tutorialtitles}/><br></br>
                 <input type='submit' /><br></br>
                 <button onClick={() => {nav('/')}}>Home</button> 
             </form>
@@ -70,7 +70,7 @@ export default function EditResource(){
     return (
         <div>
             <form class='content' onSubmit={editTheTutorialurls}>
-                Job Boards:<input type='url' name='tutorialurls' defaultValue={data.tutorialurls}/><br></br>
+                Tutorial URL:&nbsp;<input type='url' name='tutorialurls' defaultValue={data.tutorialurls}/><br></br>
                 <input type='submit' /><br></br>
                 <button onClick={() => {nav('/')}}>Home</button> 
             </form>
@@ -80,7 +80,7 @@ export default function EditResource(){
     return (
         <div>
             <form class='content' onSubmit={editTheJobboard}>
-                Job Boards:<input type='url' name='jobboards' defaultValue={data.jobboards}/><br></br>
+                Job Board:&nbsp;<input type='url' name='jobboards' defaultValue={data.jobboards}/><br></br>
                 <input type='submit' /><br></br>
                 <button onClick={() => {nav('/')}}>Home</button> 
             </form>
@@ -90,7 +90,7 @@ export default function EditResource(){
     return (
         <div>
             <form class='content' onSubmit={editTheDefinitiontitles}>
-                Definitions:<input type='text' name='definitiontitles' defaultValue={data.definitiontitles}/><br></br>
+                Definition Title:&nbsp;<input type='text' name='definitiontitles' defaultValue={data.definitiontitles}/><br></br>
                 <input type='submit' /><br></br>
                 <button onClick={() => {nav('/')}}>Home</button> 
             </form>
@@ -100,7 +100,7 @@ export default function EditResource(){
         return (
             <div>
                 <form class='content' onSubmit={editTheDefinitions}>
-                    Definitions:<input type='text' name='definitions' defaultValue={data.definitions}/><br></br>
+                    Definition:&nbsp;<input type='text' name='definitions' defaultValue={data.definitions}/><br></br>
                     <input type='submit' /><br></br>
                     <button onClick={() => {nav('/')}}>Home</button> 
                 </form>
