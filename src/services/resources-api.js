@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const baseURL = 'https://crud-expressjs-seresourcesapp.onrender.com/resources'
+// const baseURL = 'http://localhost:3001/resources'
 
 export const getResources = () => {
     const URL = baseURL

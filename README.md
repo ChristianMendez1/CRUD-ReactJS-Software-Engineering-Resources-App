@@ -71,6 +71,12 @@ Tested through Visual Stuidio Code's live server.
 Run npm install then npm start.
 ```
 
+# Back-end Link
+https://github.com/ChristianMendez1/CRUD-ExpressJS-Software-Engineering-Resources-App
+
+# Project Planning
+![readmescreenshot](https://i.imgur.com/s1P4AdS.png)
+
 # Credits
 
 ```
